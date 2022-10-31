@@ -33,7 +33,7 @@ class App extends Component {
       ))
 
     }
-
+//Onchange event handler for the textfield 
     onSearchChange = (event) => {
       const searchField = event.target.value.toLowerCase()
      
@@ -48,6 +48,7 @@ class App extends Component {
     const { monsters, searchField } = this.state
     const { onSearchChange } = this
 
+    //Filter the list of fetched array based in user input and return
     const filteredMonsters = monsters.filter((monster) => {
       return monster.name.toLowerCase().includes(searchField)
   })
